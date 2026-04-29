@@ -8,49 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "246ef5041f5a2631",
+            "id": "9830fe3688b3b2a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Model_Train_Parameter.md",
+                "file": "patent_draft.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Model_Train_Parameter"
-            }
-          },
-          {
-            "id": "44a52a71d043510d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Model_Train_Parameter.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Model_Train_Parameter"
-            }
-          },
-          {
-            "id": "676c80e86e9e9291",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前向传播与反向传播.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "前向传播与反向传播"
+              "title": "patent_draft"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -212,10 +183,16 @@
       "bases:新建数据库": false
     }
   },
-  "active": "676c80e86e9e9291",
+  "active": "9830fe3688b3b2a2",
   "lastOpenFiles": [
-    "Model_Train_Parameter.md",
-    "前向传播与反向传播.md",
-    "矩阵.md"
+    "patent_draft.md",
+    "The Role Of Paramater and Operation.md",
+    "111.md",
+    "Pasted image 20260421211648.png",
+    "Forword and Backward.md",
+    "walkthrough.md",
+    "一、 核心澄清：绝对不需要重训 NamBert！.md",
+    "矩阵.md",
+    "README.md"
   ]
 }
