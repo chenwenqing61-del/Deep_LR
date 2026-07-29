@@ -3,4 +3,5 @@
 .csv
 .json
 .jsonl
-
+*/data/
+CNN/data/fashion-mnist_train.csv

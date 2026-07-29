@@ -39,7 +39,7 @@ $$OW=(W+2P-FW)/S+1$$
 **若想获得多个卷积运算的输出，需要使用多个卷积核**
 **有多少个卷积核输出就有多少个通道，每一个卷积核的通道数都要等于输入的通道数**
 
-##### API使用
+##### 2.5 API使用
 torch.nn.Conv2d(in_channels,out_channels,kernel_size,stride,padding)
 - in_channels：输入通道数
 - out_channels：输出通道数
@@ -47,4 +47,52 @@ torch.nn.Conv2d(in_channels,out_channels,kernel_size,stride,padding)
 - stride：步幅
 - padding：填充维度
 
+**PyTorch中Conv2d要求图像的维度顺序为(N,C,H,W)**
+- N：批次大小
+- C：通道数
+- H：图像高度
+- W：图像宽
 
+#### 3 池化层
+**目的：用于缩小图像在长宽方向的空间进行降维，能够缩减模型的大小并提高计算速度**
+例如：对数据进行stride为2的2×2的**Max池化**：
+![[Pasted image 20260729120912.png]]
+池化的方法有很多，例如，**Max池化**，**Average池化**等
+池化也有padding
+**特点：**
+- 池化不会改变数据的通道数
+- 池化层没有要学习的参数
+- 对微小偏差具有鲁棒性
+![[Pasted image 20260729121225.png|341]]
+
+**池化的使用**
+```
+最大值池化
+torch.nn.MaxPool2d(kernel_size,stride,padding)
+平均池化
+torch.nn.AvgPool2d(kernel_size,stride,padding)
+```
+
+#### 4 深度卷积神经网络
+将神经网络的层数加深，可以更有效地提取层次信息，**还可以减少参数数量，让学习更加高效**
+
+##### AlexNet
+基于CNN构建的神经网络模型，**主要框架包含8层（5个卷积层+3个全连接层）**，激活函数ReLU，使用了Dropout
+![[Pasted image 20260729123249.png]]
+
+##### VGG
+VGG由多个卷积-池化层堆叠构成，**将有权重的层（卷积/全连接层）叠加至16或19层**，也称为VGG-16和VGG-19
+![[Pasted image 20260729123531.png]]
+
+##### GoogleNet
+![[Pasted image 20260729125336.png]]
+由Google团队提出的深度卷积神经网络架构。引入“Inception结构，**使得网络不仅纵向上有深度，在横向上也有深度**
+![[Pasted image 20260729125246.png]]
+
+- 有利于减少参数数量、解决梯度消失问题
+
+##### ResNet(残差网络)
+以VGG为基础，引入“快捷结构”。在原始输出的前提下，再加上Input
+![[Pasted image 20260729125619.png]]
+- 有效解决了深度网络中的**梯度消失和梯度爆炸**问题
+- 提高了网络性能

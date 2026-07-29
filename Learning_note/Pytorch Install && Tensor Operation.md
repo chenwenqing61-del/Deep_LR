@@ -363,7 +363,7 @@ print(tensor2)
 import torch
 tensor1 = torch.randint(1,9,(3,4,5))
 print(tensor1)
-print(tensor1.trnaspose(1,2)) #交换第一和第二维度
+print(tensor1.transpose(1,2)) #交换第一和第二维度
 ```
 
 **重新排列多个维度permute()**
